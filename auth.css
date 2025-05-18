@@ -1,0 +1,112 @@
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+    background: #f5f5f5;
+}
+
+.auth-form {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    padding: 25px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.4s ease-out;
+}
+
+.auth-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 22px;
+    color: #333;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s;
+    -webkit-appearance: none;
+}
+
+.auth-form button {
+    width: 100%;
+    padding: 14px;
+    background: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+    min-height: 44px;
+}
+
+.error {
+    color: #d32f2f;
+    background: #fce4e4;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.auth-footer a {
+    color: #4285f4;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Медиазапросы */
+@media (min-width: 480px) {
+    .auth-form {
+        padding: 30px;
+        max-width: 400px;
+    }
+}
+
+@media (min-width: 768px) {
+    .auth-container {
+        padding: 40px;
+    }
+    
+    .auth-form {
+        padding: 40px;
+    }
+}
+
+/* Специфичные фиксы */
+@media (max-width: 350px) {
+    .auth-form {
+        padding: 20px 15px;
+    }
+    
+    .auth-form h2 {
+        font-size: 20px;
+    }
+}
+
+/* Фикс для авто заполнения */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+}
